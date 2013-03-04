@@ -1,0 +1,206 @@
+%% Exemple de source LaTeX pour un article soumis à TALN
+\documentclass[10pt,a4paper,twoside]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+
+% Package utilisé uniquement pour l'exemple.
+\usepackage{lipsum}
+\usepackage{hyperref}
+
+% faire les \usepackage dont vous avez besoin AVANT le \usepackage{jeptaln2012} 
+% add the \usepackage for you packages BEFORE the \usepackage{jeptaln2012}
+
+\usepackage{talnrecital2013}
+% Insérer les définitions de biblio en français (cf apalike-fr.bst)
+\usepackage[frenchb]{babel}
+
+
+\title{Modèle de document pour TALN-RECITAL 2013}
+
+\author{Untel Trucmuche\up{1, 2}\quad Unetelle Machinchose\up{1, 3}\\
+{\small  (1) LIRMM, 161, rue ADA  34392 Montpellier Cedex 5\\ 
+  (2) INSERM, U729, 75006 Paris \\ 
+  (3) INALCO, CRIM, 75343 Paris Cedex 07 \\ 
+  \texttt{utrucmuche@lirmm.fr, umachinchose@inserm.fr} \\ 
+}}
+
+\begin{document}
+
+\maketitle
+
+%% In an English article, use \resumeEn with 2 arguments (french title and french summary)
+\resume{
+Ici, un résumé en français (max. 150 mots).\\
+\lipsum[1]
+}
+
+%% In an English article, use \abstractEn with 1 arguments (english summary)
+\abstract{TALN-RECITAL2013 template (English translation of the article title)}{
+The translation of the title in English is mandatory to enhance visibility of the online version of the papers in international scientific article databases (DBLP, citeseer, etc.). Here an abstract in English (max. 150 words).\\
+\lipsum[2]
+}
+
+\motsClefs{Ici une liste de mots-clés en français}
+{Here a list of keywords in English}
+
+%\motsClefs{Ici une liste de mots-clés en français}
+%{Here a list of keywords in English}
+
+%% Aller à la page suivante si nécessaire
+%\newpage
+%%================================================================
+\section{Format des soumissions}
+
+Depuis quelques années, les conférences scientifiques proposent une diffusion des actes sur support électronique et évite l'impression d'actes papiers aux participants qui n'en font pas la demande. Afin de privilégier ce mode de fonctionnement, les conférences TALN et RECITAL en 2013 utilisent un style \emph{optimisé pour la lecture à l'écran} comme en 2012.
+
+\subsection{Format de document, polices de caractères}
+
+Les articles soumis seront déposés au format PDF, formatés en $150mm \times 210mm$ avec une marge de $5mm$ sur tous les côtés. Aucun entête ni pied de page ne sera présent dans le document soumis.
+
+La police de caractères choisie privilégie la lecture à l'écran tout en étant élégante à l'impression. Les documents devront être formatés en utilisant la police \emph{Charter (Bitstream)}. Les utilisateurs de Word, LibreOffice ou Pages devront utiliser une police équivalente (par ordre de préférence):
+
+\begin{itemize}
+\item Charter (par Bitstream, disponible sur la plupart des linux et en \LaTeX{} dans les installations texlive);
+\item Charis SIL (par SIL, une extension de Charter, disponible à:\\ \href{http://scripts.sil.org/cms/scripts/page.php?item_id=CharisSIL_download}{http://scripts.sil.org/cms/scripts/page.php?item\_id=CharisSIL\_download});
+\item Georgia (fonte faisant partie du noyaux des fontes microsoft, disponible sur la plupart des Windows et dans les suite Office).
+\end{itemize} 
+
+Le corps de texte sera en taille 10pt. Les titres en gras, 11pt. Les articles seront rédigés en français pour les francophones, en anglais pour ceux qui ne maîtrisent pas le français.
+
+\subsection{Mise en page}
+
+Les paragraphes sont formatés avec un espacement simple. Ils sont justifiés à droite et à gauche. Ils ne sont pas indentés mais sont séparés par un espacement d'une demi-hauteur de ligne.
+
+La première page ne contient que le titre, le nom des auteurs, leur affiliation, les résumés et les mots-clés, alors que le corps de l’article commence à la deuxième page. Cependant, au besoin, on fera commencer le corps de l’article directement après les mots-clés, en veillant à ce qu’un titre ne soit pas séparé du paragraphe suivant. Attention, cette année, afin d'augmenter la visibilité des publications pour une audience internationale, il est demandé de fournir une version anglaise du titre et du résumé.
+
+
+%Les articles soumis ne devront pas dépasser 12 pages en Times 10, espacement simple, soit environ 4500 mots, figures, exemples et références compris. Les propositions de démonstrations ne devront pas dépasser 3 pages. Les articles seront rédigés en français pour les francophones, en anglais pour ceux qui ne maîtrisent pas le français. Les versions devront être en format A4. Prévoir des marges de 1,27 cm à gauche, à droite, en haut et en bas (marges étroites).
+
+Une feuille de style LaTeX, un modèle Word, un modèle Odt et un modèle Pages sont disponibles sur le site web de la conférence. Le site web de la conférence prévoit un formulaire interactif pour la soumission des articles, à télécharger au format PDF. 
+
+Les versions finales devront être envoyées en format pdf en suivant \textbf{scrupuleusement} le format décrit ici. Si pour une raison ou pour une autre vous ne pouvez pas fournir un papier dans ce format, prenez contact le plus vite possible avec les organisateurs. Les organisateurs se réservent le droit de ne pas publier un article qui ne respecterait pas le format demandé.
+
+Le message d’acceptation de la proposition indiquera les modalités d’envoi de la version définitive.
+
+\subsection{Taille des articles}
+
+Selon les soumissions déposées, les articles ne devront pas dépasser les tailles suivantes:
+
+\begin{itemize}
+\item 11 à 14 pages pour les articles longs TALN,
+\item 6 à 8 pages pour les articles courts TALN,
+\item jusqu'à 14 pages pour les articles RECITAL,
+
+\end{itemize}
+
+\subsection{Autres éléments de mise en page}
+
+\subsubsection{Les listes}
+
+\begin{itemize}
+\item Une liste à puce
+\item avec plusieurs lignes
+\item pas trop espacées... 
+\end{itemize}
+
+
+\begin{enumerate}
+\item Une liste numérotée
+\item où le 2. succède, étrangement, au 1.
+\item et le trois, au deux... (ce serait pas ambigu cela ?)
+\end{enumerate}
+
+\subsubsection{Figures et tables}
+
+Les figures et les tables seront centrées sur la page avec une légende située en dessous. La légende contiendra le mot clé figure (ou table) en petite capitale, suivi du numéro de la figure ou de la table (numéros indépendants). La figure \ref{image} et la table \ref{table} en sont un exemple. Les équations peuvent figurer "en ligne" ou centrées sur la page, sans légende. Un numéro de renvoie peut figurer à droite de l'équation pour permettre les références dans le texte.
+
+\begin{table}[!h]
+\centering
+	\begin{tabular}{|c|p{4cm}|}
+	\hline
+	Un tableau&\\
+	\hline
+	&Les cellules ainsi que le tableau sont centrés\\
+	\hline
+	\end{tabular}
+\caption{Un tableau}\label{table}
+\end{table}
+
+\subsubsection{Notes et références}
+
+Une note de bas de page\footnote{Que voici !} pourra être rajoutée.
+
+Les renvois à la bibliographie, dont un exemple est \cite{Bernhard07}, sont formatés selon le style <<apalike>> francisé par \cite{apalikefr} (disponible dans les installations latex basées sur texlive). L'url de ce style vous est fournie en bibliographie au cas où vous ne l'ayez pas dans votre installation. Il est aussi disponible sur CTAN.
+
+Les utilisateurs de Word, LibreOffice ou Pages sont encouragés à suivre le style <<apalike>> francisé au plus prêt en utilisant leur propre outil de gestion de bibliographie (Mendeley, Zotero ou Endnote). Ils s'appuieront le cas échéant sur l'exemple ci dessous. Les auteurs citant des infos en ligne (URLs) veilleront à mettre la date de consultation dans la référence.
+
+Le reste de ce document n'a pour but que d'illustrer le format décrit ci-dessus.
+
+\begin{figure}[htbp] 
+\begin{center} 
+\includegraphics{atala.png}
+\end{center} 
+\caption{Une image comme figure} \label{image} \
+\end{figure}
+
+\lipsum[4]
+
+
+Il est parfois intéressant de noter que $\forall x \, x \in R \,\Rightarrow\; x \in R$. et ce même si $\sqrt{x^2} = x$. Sans compter que parfois, et même assez souvent, une bonne équation peut être beaucoup plus claire qu'un long discours.
+
+	\[
+        \frac{d}{dx}\left( \int_{0}^{x} f(u)\,du\right)=f(x).
+     \]
+
+
+\lipsum[6-7]
+
+\begin{figure}[htbp] 
+\begin{center} 
+~\\
+~\\
+\framebox[5cm]{étape 1}\\
+ ~~~~~~~~ | \\
+ ~~~~~~~~ | \\
+\framebox[5cm]{étape 2}\\
+~~~~~~~~ | \\
+~~~~~~~~ | \\
+\framebox[5cm]{étape 3}\\
+~~~~~~~~ | \\
+~~~~~~~~ | \\
+\framebox[5cm]{étape 4}\\
+
+\end{center} 
+\caption{Un schéma comme figure} \label{schema} \
+\end{figure}
+
+\lipsum[8]
+
+%%================================================================
+\subsection{Titre de la deuxième sous-partie}
+
+\lipsum[9]
+
+\section{Titre de la deuxième partie}
+
+\lipsum[10-11]
+
+%%================================================================
+\section*{Remerciements (pas de numéro)} 
+
+Paragraphe facultatif
+
+%%================================================================
+%% Note : si l'on préfère éviter de factoriser les crossrefs :
+%% bibtex -min-crossrefs 99 taln-exemple
+%%================================================================
+
+
+\bibliographystyle{apalike-fr}
+\bibliography{biblio}
+\nocite{TALN2007,LaigneletRioult09,LanglaisPatry07,SeretanWehrli07}
+
+%%================================================================
+\end{document}
